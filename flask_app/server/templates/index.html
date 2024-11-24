@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Estimator</title>
+    <script>
+        // Function to populate locations
+        async function loadLocations() {
+            const response = await fetch('http://127.0.0.1:5000/locations');
+            const data = await response.json();
+            const locations = data.locations;
+            const locationDropdown = document.getElementById('location');
+
+            locations.forEach(location => {
+                const option = document.createElement('option');
+                option.value = location;
+                option.textContent = location;
+                locationDropdown.appendChild(option);
+            });
+        }
+
+        // Function to estimate price
+        async function estimatePrice() {
+            // Get the values from the form
+            const location = document.getElementById('location').value;
+            const bhk = document.getElementById('bhk').value;
+            const bathrooms = document.getElementById('bathrooms').value;
+            const areaSize = document.getElementById('area-size').value;
+
+            // Validate inputs
+            if (!location || !bhk || !bathrooms || !areaSize) {
+                alert("Please fill all the fields!");
+                return;
+            }
+
+            try {
+
+                // Prepare form data for submission
+                const formData = new FormData();
+                formData.append('location', location);
+                formData.append('bhk', bhk);
+                formData.append('bath', bathrooms);
+                formData.append('areaSize', areaSize);
+
+                 // Make the API request
+                const response = await fetch('http://127.0.0.1:5000/estimate_price', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                // Check if the response is successful
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data from the server');
+                }
+
+                // Parse the JSON response
+                const result = await response.json();
+
+                // Display the estimated price
+                if (result && result.estimated_price) {
+                    document.getElementById('result').textContent = `Estimated Price: ${result.estimated_price} lakh rupees`;
+                } else {
+                    document.getElementById('result').textContent = 'Error: Invalid response from server';
+                }
+
+            } catch (error) {
+                // Handle errors (e.g., network issues, invalid API responses)
+                console.error('Error:', error);
+                document.getElementById('result').textContent = 'Error: Could not retrieve data';
+            }
+        }
+
+        // Load locations on page load
+        document.addEventListener('DOMContentLoaded', loadLocations);
+    </script>
+</head>
+<body>
+    <div class="img"></div>
+    <h1>House Price Estimator</h1>
+    <form onsubmit="event.preventDefault(); estimatePrice();">
+        <label for="location">Location:</label>
+        <select id="location">
+            <option value="">Select a location</option>
+        </select><br><br>
+
+        <label for="bhk">BHK:</label>
+        <select id="bhk">
+            <option value="">Select BHK</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select><br><br>
+
+        <label for="bathrooms">Bathrooms:</label>
+        <select id="bathrooms">
+            <option value="">Select Bathrooms</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select><br><br>
+
+        <label for="area-size">Area Size (sq ft):</label>
+        <input type="number" id="area-size" placeholder="Enter area in sq ft"><br><br>
+
+        <button type="submit">Estimate</button>
+    </form>
+
+    <h2 id="result"></h2>
+</body>
+</html>

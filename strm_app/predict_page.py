@@ -15,57 +15,57 @@ import requests
 #     return base64.b64encode(data).decode()
 
 # img = get_img_as_base64(
-#     r"C:\Users\91948\Documents\VS Code Files\LocalFile_RealEstate-Valuation-System\model\Valuation Pic.png"
+#     r"C:\Users\91948\Downloads\BKs\Learning\Projects\RealEstate-Valuation-System\model\Valuation Pic.png"
 # )
 
 # For Local Checks
 
-# def load_model():
-#     with open(
-#         r"C:\Users\91948\Documents\VS Code Files\RealEstate Valuation System\model\House Price Prediction_Pickle.pickle",
-#         "rb",
-#     ) as f:
-#         return pickle.load(f)
+def load_model():
+    with open(
+        r"C:\Users\91948\Downloads\BKs\Learning\Projects\RealEstate-Valuation-System\artifacts\House Price Prediction_Pickle.pickle",
+        "rb",
+    ) as f:
+        return pickle.load(f)
 
 # For Deployment
 
 
-def load_model():
-    github_raw_url = "https://raw.githubusercontent.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/main/model/House%20Price%20Prediction_Pickle.pickle"
+# def load_model():
+#     github_raw_url = "https://raw.githubusercontent.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/main/model/House%20Price%20Prediction_Pickle.pickle"
 
-    response = requests.get(github_raw_url)
+#     response = requests.get(github_raw_url)
 
-    if response.status_code == 200:
-        return pickle.loads(response.content)
-    else:
-        print(f"Failed to fetch the model file. Status code: {response.status_code}")
-        return None
+#     if response.status_code == 200:
+#         return pickle.loads(response.content)
+#     else:
+#         print(f"Failed to fetch the model file. Status code: {response.status_code}")
+#         return None
 
 
 # For Local Checks
 
-# def load_prediction_input():
-#     with open(
-#         r"C:\Users\91948\Documents\VS Code Files\RealEstate Valuation System\model\prediction_input.json",
-#         "rb",
-#     ) as f:
-#         return json.load(f)
+def load_prediction_input():
+    with open(
+        r"C:\Users\91948\Downloads\BKs\Learning\Projects\RealEstate-Valuation-System\artifacts\prediction_input.json",
+        "rb",
+    ) as f:
+        return json.load(f)
 
 # For Deployment
 
 
-def load_prediction_input():
-    github_raw_url = "https://raw.githubusercontent.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/main/model/prediction_input.json"
+# def load_prediction_input():
+#     github_raw_url = "https://raw.githubusercontent.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/main/model/prediction_input.json"
 
-    response = requests.get(github_raw_url)
+#     response = requests.get(github_raw_url)
 
-    if response.status_code == 200:
-        return json.loads(response.content)
-    else:
-        print(
-            f"Failed to fetch the prediction input file. Status code: {response.status_code}"
-        )
-        return None
+#     if response.status_code == 200:
+#         return json.loads(response.content)
+#     else:
+#         print(
+#             f"Failed to fetch the prediction input file. Status code: {response.status_code}"
+#         )
+#         return None
 
 
 def load_predicted_values(location, bath, bhk, area, all_columns, model):
@@ -106,14 +106,14 @@ def show_predict_page():
     # st.title("RealEstate Valuation System 🏘")
 
     st.image(image_url)
-    # st.markdown("""##### Provide input for the prediction""")
+    st.markdown("""##### Provide input for the prediction""")
 
     ip_location = st.selectbox("""#### 🌍 Choose a Location""", locations)
-    ip_bath = st.radio(
-        """#### 🛁 Number of Bathrooms""", [i for i in range(1, 6)], horizontal=True
-    )
     ip_bhk = st.radio(
         """#### 🛏️ Number of Bedrooms""", [i for i in range(1, 6)], horizontal=True
+    )
+    ip_bath = st.radio(
+        """#### 🛁 Number of Bathrooms""", [i for i in range(1, 6)], horizontal=True
     )
     ip_area = st.number_input("""#### 📐 Area Size (in sqft)""", key=int, step=1)
     ip_ok = st.button(
