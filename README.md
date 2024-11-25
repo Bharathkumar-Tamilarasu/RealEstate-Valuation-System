@@ -3,7 +3,7 @@
 ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
 ![Google Colab](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
@@ -13,14 +13,15 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-7db0bc.svg?style=for-the-badge&logo=pypi&logoColor=white)
 ![Regex](https://img.shields.io/badge/Regex-64029a.svg?style=for-the-badge&logo=python&logoColor=white)
 
+
 **Author**: Bharathkumar Tamilarasu <br />
 **Email**: bharathkumar.t.17@gmail.com <br />
-**Website**: https://bharathkumart17.wixsite.com/portfolio <br />
-**LinkedIn**: https://www.linkedin.com/in/bharathkumar-tamilarasu-218429222/  <br />
+**Website**: https://www.datascienceportfol.io/bharathkumar_t <br />
+**LinkedIn**: https://www.linkedin.com/in/bharathkumartamilarasu/  <br />
 
 ##
 
-![Valuation Pic 2](https://github.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/blob/main/Valuation%20Pic%202.jpg)
+![Valuation Pic 2](https://github.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/blob/main/assets/Valuation%20Pic%202.jpg)
 
 # **Table of Contents**
   
@@ -56,7 +57,7 @@
 
 The data for this project was collected from Kaggle, a popular platform for data science competitions and datasets.
 
-* Check out the dataset [here](https://github.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/blob/main/bengaluru_house_prices.csv)
+* Check out the dataset [here](https://github.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/blob/main/data/bengaluru_house_prices.csv)
 
 ## **About the Dataset**
 
