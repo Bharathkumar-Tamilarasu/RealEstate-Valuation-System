@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, jsonify
 import util
 
@@ -32,5 +33,6 @@ if __name__ == "__main__":
     print("Artifacts Loading - Inprogress...")
     util.artifacts_loader()
     print("Artifacts Loading - Completed...")
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
     
