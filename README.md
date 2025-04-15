@@ -28,15 +28,16 @@
 - Introduction
 - Objective
 - Data Collection
-- About the Dataset
-- Python libraries used
-- Project Work flow
+- Dataset Overview
+- Tools and Technologies
+- Project Workflow
   1. Data Exploration
-  2. Data Wrangling
+  2. Data Preprocessing
   3. Feature Engineering
-  4. Outliers Removal
-  5. Model Building
-  6. Prediction
+  4. Outlier Detection & Removal
+  5. Model Building & Training
+  6. Prediction & Evaluation
+- Results & Performance on Real-World Data
 - Limitations
 - Conclusion
 
@@ -59,7 +60,7 @@ The data for this project was collected from Kaggle, a popular platform for data
 
 * Check out the dataset [here](https://github.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/blob/main/data/bengaluru_house_prices.csv)
 
-## **About the Dataset**
+## **Dataset Overview**
 
 ### Dataset Information:
 
@@ -81,7 +82,7 @@ The data for this project was collected from Kaggle, a popular platform for data
 * Balcony: The number of balconies in the property.
 * Price: The listed price of the property.
 
-## **Libraries Used:**
+## **Tools and Technologies:**
 
 Employed the following libraries for comprehensive data analysis:
 
@@ -91,25 +92,37 @@ Employed the following libraries for comprehensive data analysis:
 * Utilized **Matplotlib.Pyplot** and **Seaborn** for creating insightful visualizations.
 * Integrated **Regex** for advanced text pattern matching.
 
-## **Project Work flow**
+## **Project Workflow**
 
 **1. Data Exploration**
   - Immerse into a comprehensive exploration of the dataset, uncovering its characteristics, patterns, and potential challenges.
 
-**2. Data Wrangling**
+**2. Data Preprocessing**
   - Systematically clean and preprocess the data, addressing missing values, inconsistencies, and preparing it for further analysis.
 
 **3. Feature Engineering**
   - Creatively enhance the dataset by crafting new features or transforming existing ones to improve model performance.
 
-**4. Outliers Removal**
+**4. Outlier Detection & Removal**
   - Identify and handle outliers to ensure a more robust and accurate modeling process.
 
-**5. Model Building**
+**5. Model Building & Training**
   - Develop and train models based on the refined dataset, employing techniques that align with the project's objectives.
 
-**6. Prediction**
+**6. Prediction & Evaluation**
   - Utilize the trained models to make predictions on new data, assessing their accuracy and reliability.
+
+
+## **Results & Performance on Real-World Data**
+
+- Estimated Price
+
+![Example Estimation](https://github.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/blob/main/assets/Example%20Estimation.png)
+
+- Actual Price for the same data in Magicbricks
+
+![Actual Price](https://github.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/blob/main/assets/Actual%20Price.png)
+
 
 ## Limitations
 * Potential presence of duplicate values in the training data due to identical configurations of bathrooms, bedrooms (BHKs), and square footage for the same location.
@@ -127,17 +140,6 @@ Employed the following libraries for comprehensive data analysis:
 * Throughout the project, we encountered challenges related to BHK and Price Outliers removal. Overcoming these challenges has not only strengthened the robustness of the system but also provided valuable insights for future enhancements.
 * Overall, this project has not only delivered a functional Real Estate Valuation System but has also provided valuable lessons and opportunities for further innovation.
 * As the real estate market continues to evolve, this system stands poised to make a meaningful impact by empowering users with accurate and transparent property valuations.
-
-
-## **Predictions**
-
-- Estimated Price
-
-![Example Estimation](https://github.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/blob/main/assets/Example%20Estimation.png)
-
-- Actual Price for the same data in Magicbricks
-
-![Actual Price](https://github.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/blob/main/assets/Actual%20Price.png)
 
 
 ### **Ready to forecast housing prices? Click [here](https://realestate-valuation-system-fqcq.onrender.com/) to use our RealEstate Valuation System.**
