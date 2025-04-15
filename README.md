@@ -111,7 +111,6 @@ Employed the following libraries for comprehensive data analysis:
 **6. Prediction**
   - Utilize the trained models to make predictions on new data, assessing their accuracy and reliability.
 
-
 ## Limitations
 * Potential presence of duplicate values in the training data due to identical configurations of bathrooms, bedrooms (BHKs), and square footage for the same location.
 * Exclusion of key features such as 'area_type,' 'availability,' 'society,' and 'balcony' from consideration.
@@ -128,6 +127,18 @@ Employed the following libraries for comprehensive data analysis:
 * Throughout the project, we encountered challenges related to BHK and Price Outliers removal. Overcoming these challenges has not only strengthened the robustness of the system but also provided valuable insights for future enhancements.
 * Overall, this project has not only delivered a functional Real Estate Valuation System but has also provided valuable lessons and opportunities for further innovation.
 * As the real estate market continues to evolve, this system stands poised to make a meaningful impact by empowering users with accurate and transparent property valuations.
+
+
+## **Predictions**
+
+- Estimated Price
+
+![Example Estimation](https://github.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/blob/main/assets/Example%20Estimation.png)
+
+- Actual Price for the same data in Magicbricks
+
+![Actual Price](https://github.com/Bharathkumar-Tamilarasu/RealEstate-Valuation-System/blob/main/assets/Actual%20Price.png)
+
 
 ### **Ready to forecast housing prices? Click [here](https://realestate-valuation-system-fqcq.onrender.com/) to use our RealEstate Valuation System.**
 ### **Your time and interest in viewing my project are greatly appreciated. Thank you. 😃!**
